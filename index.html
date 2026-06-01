@@ -20,17 +20,17 @@
     <style>
         /* ============================================================
            TEMA MODIFICABLE  —  CAMBIA SOLO ESTO PARA OTRO CLIENTE
-           (perfil: SALUD PREMIUM -> oscuro elegante + dorado champán)
+           (perfil: CLÍNICA BIOC -> azul marino + acento azul, fondo oscuro)
            ============================================================ */
         :root {
-            --brand:      #C9A96A;   /* Dorado champán (acento principal) */
-            --brand-dark: #A8884A;   /* Dorado oscuro (hover) */
-            --accent:     #C9A96A;   /* Acento secundario */
-            --bg:         #0E0E10;   /* Negro cálido (fondo) */
-            --surface:    #17171A;   /* Superficie de tarjetas */
-            --surface-2:  #1F1F23;   /* Superficie alternativa */
-            --text:       #F2EEE6;   /* Blanco cálido (texto) */
-            --muted:      #A29B8F;   /* Gris cálido (texto secundario) */
+            --brand:      #4F93D1;   /* Azul marca (acento principal) */
+            --brand-dark: #3672A8;   /* Azul oscuro (hover) */
+            --accent:     #4F93D1;   /* Acento secundario */
+            --bg:         #0A1526;   /* Azul marino muy oscuro (fondo) */
+            --surface:    #0F1E36;   /* Superficie de tarjetas */
+            --surface-2:  #16294A;   /* Superficie alternativa */
+            --text:       #EAF1F9;   /* Blanco frío (texto) */
+            --muted:      #93A4BC;   /* Gris azulado (texto secundario) */
             --font-head:  'Playfair Display', serif;  /* titulares */
             --font-body:  'Jost', sans-serif;         /* cuerpo */
         }
@@ -41,8 +41,8 @@
         html { scroll-behavior: smooth; }
         .kicker { letter-spacing: 0.35em; text-transform: uppercase; font-size: 0.72rem; font-weight: 500; }
         .hairline { width: 56px; height: 1px; background: var(--brand); }
-        .overlay { background: linear-gradient(180deg, rgba(14,14,16,.55) 0%, rgba(14,14,16,.55) 40%, rgba(14,14,16,.92) 100%); }
-        .overlay-side { background: linear-gradient(90deg, rgba(14,14,16,.85) 0%, rgba(14,14,16,.55) 50%, rgba(14,14,16,.30) 100%); }
+        .overlay { background: linear-gradient(180deg, rgba(10,21,38,.55) 0%, rgba(10,21,38,.55) 40%, rgba(10,21,38,.92) 100%); }
+        .overlay-side { background: linear-gradient(90deg, rgba(10,21,38,.85) 0%, rgba(10,21,38,.55) 50%, rgba(10,21,38,.30) 100%); }
         .lift { transition: transform .4s ease, border-color .4s ease; }
         .lift:hover { transform: translateY(-6px); border-color: var(--brand); }
         .img-zoom { transition: transform .9s ease; }
@@ -71,7 +71,7 @@
             </button>
         </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t" style="background: var(--bg); border-color: rgba(201,169,106,.2);">
+    <div id="mobile-menu" class="hidden md:hidden border-t" style="background: var(--bg); border-color: rgba(79,147,209,.2);">
         <div class="px-6 py-4 flex flex-col gap-3 text-sm">
             <a href="#servicios" class="py-2 hover:text-[var(--brand)]">Tratamientos</a>
             <a href="#filosofia" class="py-2 hover:text-[var(--brand)]">Filosofía</a>
@@ -112,7 +112,7 @@
                 <h2 class="font-head text-4xl md:text-5xl font-semibold leading-tight">Tratamientos de precisión</h2>
                 <div class="hairline mt-6"></div>
             </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px" style="background: rgba(201,169,106,.18);">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px" style="background: rgba(79,147,209,.18);">
                 <article class="lift p-9 border border-transparent" style="background: var(--surface);">
                     <span class="font-head text-3xl" style="color: var(--brand)">01</span>
                     <h3 class="font-head text-xl mt-5 mb-3">Terapia manual</h3>
@@ -174,7 +174,7 @@
     <!-- BANDA RENDIMIENTO -->
     <section class="relative py-28 md:py-36">
         <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');"></div>
-        <div class="absolute inset-0" style="background: rgba(14,14,16,.78);"></div>
+        <div class="absolute inset-0" style="background: rgba(10,21,38,.78);"></div>
         <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
             <div class="hairline mx-auto mb-8"></div>
             <p class="font-head text-3xl md:text-4xl leading-snug italic">
@@ -259,7 +259,7 @@
 </main>
 
 <!-- FOOTER / PIE DE PÁGINA -->
-<footer class="pt-16 pb-8 border-t" style="border-color: rgba(201,169,106,.18);">
+<footer class="pt-16 pb-8 border-t" style="border-color: rgba(79,147,209,.18);">
     <div class="max-w-7xl mx-auto px-5 sm:px-8">
         <div class="flex flex-col md:flex-row justify-between gap-8 mb-12">
             <div class="max-w-sm">
@@ -304,8 +304,8 @@
 
         const onScroll = () => {
             if (window.scrollY > 40) {
-                nav.style.background = 'rgba(14,14,16,.92)';
-                nav.style.borderBottom = '1px solid rgba(201,169,106,.18)';
+                nav.style.background = 'rgba(10,21,38,.92)';
+                nav.style.borderBottom = '1px solid rgba(79,147,209,.18)';
                 nav.style.backdropFilter = 'blur(8px)';
             } else {
                 nav.style.background = 'transparent';
